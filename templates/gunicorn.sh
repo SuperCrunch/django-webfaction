@@ -2,7 +2,7 @@
 
 # Usage: ./gunicorn.sh { start | stop | restart }
 
-GUNICORN="/home/$USER/bin/gunicorn_django"
+GUNICORN="python manage.py run_gunicorn"
 DIR="$( cd "$( dirname "$0" )" && pwd )"
 BASE_CMD="$GUNICORN -c $DIR/config.py"
 SERVER_PID="$DIR/wsgi.pid "
